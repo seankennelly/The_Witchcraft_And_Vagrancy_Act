@@ -1,4 +1,4 @@
-[Band logo](./images/favicon/android-chrome-512x512.png)
+![Band logo](./images/favicon/android-chrome-512x512.png)
 # The Witchcraft & Vagrancy Act
 
 ## Description
