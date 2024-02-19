@@ -1,0 +1,720 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1;
+  width: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ----------------
+  1. PAGE STANDARDS
+  ---------------- */
+@font-face {
+  font-family: Orwell;
+  src: url(Orwell.ttf);
+}
+
+@font-face {
+  font-family: PrinceValiant;
+  src: url(PrinceValiant.ttf);
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto 0;
+  font-family: Orwell;
+  font-size: 16px;
+  background-color: black;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1.2rem auto 3rem;
+  font-size: calc(1.5rem + 0.25vw);
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0.5rem 0;
+  list-style: none;
+  text-shadow: 2px 2px 2px grey;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+nav ul li:hover {
+  /* On hover text shadow changes */
+  text-shadow: 2px 2px 8px rgba(253, 255, 250, 1);
+}
+
+@media (min-width: 732px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1.4rem auto 4rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    margin: 0;
+  }
+}
+
+@media (min-width: 890px) {
+  nav {
+    font-size: calc(1.5rem + 0.5vw);
+  }
+}
+
+/* FOOTER */
+.footer-wrapper {
+  position: relative;
+  margin-top: 4rem;
+  padding: 1rem 0.5rem;
+}
+
+.footer-wrapper::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+
+.footer {
+  position: relative;
+  text-align: center;
+  font-size: calc(1.3rem + 0.5vw);
+  color: whitesmoke;
+  overflow-wrap: break-word;
+}
+
+.footer .socials {
+  margin: 0.5rem 0.5rem;
+  width: 42px;
+}
+
+.footer #resize-youtube {
+  /* Shrinks Youtube logo to same size as other social icons */
+  width: 37px;
+  position: relative;
+  top: 0;
+}
+
+.footer #copyright {
+  padding: 0.5rem;
+  font-size: calc(0.5rem + 0.5vw);
+}
+
+/* 
+UNDER CONSTRUCTION
+ */
+
+.under {
+  background-image: url('../images/background_paper.jpg');
+  background-size: cover;
+  background-color: black;
+  color: rgb(0, 0, 0);
+  /* height: 100vh; */
+  margin: 0 auto 0;
+  /* Stops nav pushing div container down */
+  overflow: hidden;
+  font-size: calc(1.1rem + 0.5vw);
+  text-align: center;
+}
+
+.under .container {
+  padding: 1rem 1rem;
+}
+
+.under i {
+  font-size: 4rem;
+}
+
+.under h1 {
+  font-size: 3rem;
+  font-family: 'Princevaliant';
+}
+
+/* -----------
+  2. HOMEPAGE
+-------------*/
+.home {
+  background-image: url('../images/background_sigil.jpg');
+  background-size: contain;
+  background-color: black;
+  color: rgb(0, 0, 0);
+  height: 100vh;
+}
+
+.home .container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: calc(2rem + 0.5vw);
+}
+
+.home .col {
+  padding: 2rem 0.75rem;
+  flex-basis: max-content;
+}
+
+.home h1 {
+  font-size: calc(3rem + 0.5vw);
+}
+
+.home h1,
+.home h2 {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  text-shadow: 2px 2px 2px grey;
+}
+
+.home h1:hover,
+.home h2:hover {
+  text-shadow: 2px 2px 5px rgba(253, 255, 250, 1);
+}
+
+@media (min-width: 637px) {
+  .home {
+    background-size: cover;
+  }
+}
+
+
+/* --------
+  3. ABOUT
+----------*/
+.about {
+  background-image: url('../images/background_paper.jpg');
+  background-size: contain;
+  background-color: black;
+  color: black;
+  margin: 0 auto 0;
+  /* \/ Stops nav pushing div container down */
+  overflow: hidden;
+  font-size: calc(1.1rem + 0.5vw);
+}
+
+.about h1 {
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px grey;
+  font-size: calc(3rem + 0.5vw);
+}
+
+.about .intro-image {
+  width: 100%;
+  margin: 2rem auto 0.5rem;
+}
+
+.about .intro p {
+  width: 90%;
+  margin: 0.5rem auto 1rem;
+  text-align: center;
+  font-size: calc(1.2rem + 0.5vw);
+}
+
+.about .band img {
+  width: 100%;
+}
+
+.about .band .bio {
+  margin: 4rem auto;
+}
+
+.about .band .name {
+  font-weight: 800;
+  font-size: calc(1.5rem + 0.5vw);
+}
+
+.about .band .italics {
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+
+  /* Rectifies Bootstrap's change in container max-width at 768px */
+  .about .band .bio {
+    text-align: center;
+  }
+
+  .about .band .row .col-lg {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about .band .row {
+    width: 80%;
+    margin: 0 auto 0;
+  }
+}
+
+@media (min-width: 960px) {
+
+  /* Changes spacing between elements, changes band text alignment and image size */
+  .about main {
+    margin-top: 3rem;
+  }
+
+  .about .band {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+  }
+
+  .about .band .bio {
+    margin: 2rem 0;
+  }
+
+  .about .band .row {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+
+  .about .band img {
+    text-align: center;
+    width: 90%;
+  }
+
+  /* All bios changed from centre alignment. For 2nd bio */
+  .about .band .bio p {
+    text-align: right;
+  }
+
+  /* Correcting text alignment for 1st & 3rd bio */
+  .about .band .bio:first-child p,
+  .about .band .bio:last-child p {
+    text-align: left;
+  }
+}
+
+/* ------------
+  4. HAXAN LIVE
+  ------------ */
+
+.haxan {
+  background-image: url('../images/background_paper.jpg');
+  background-size: contain;
+  background-color: black;
+  color: black;
+  margin: 0 auto 0;
+  /* Stops nav pushing div container down */
+  overflow: hidden;
+  font-size: calc(1.1rem + 0.5vw);
+  text-align: center;
+}
+
+.haxan .main {
+  padding: 0 calc(1rem + 1vw) 0;
+  max-width: 1200px;
+}
+
+.haxan .container-fluid {
+  /* Removed padding to move it to '.section-container' */
+  padding: 0;
+}
+
+.haxan .section-container {
+  position: relative;
+  margin: 1.5em auto 0;
+  padding: 1rem calc(1rem + 1vw) 1rem;
+}
+
+.haxan .section-container::before {
+  content: "";
+  background-color: black;
+  border-radius: 5px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
+}
+
+.haxan .section-container:first-child::before {
+  /* Removes background from intro section without losing padding */
+  opacity: 0;
+}
+
+.haxan h1 {
+  margin: 0 auto 1em;
+  font-family: 'PrinceValiant';
+  text-shadow: 2px 2px 2px grey;
+  font-size: calc(3rem + 0.5vw);
+}
+
+.haxan h2 {
+  margin: 0 auto 1em;
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px grey;
+  font-size: calc(1.5rem + 0.5vw);
+}
+
+.haxan h3 {
+  text-decoration: underline;
+  font-size: calc(1 1rem + 0.5vw);
+  margin: 1.5em auto 0.5em;
+}
+
+.haxan .main> :nth-child(2) p {
+  /* Section 2 paragraph */
+  margin: 1rem auto;
+}
+
+.haxan p + p {
+  /* For para that follows para */
+  margin: 1em auto 0;
+}
+
+.haxan .main img {
+  /* Font size for responsive margins */
+  font-size: calc(1rem + 1vw);
+  margin: 1em 0 1em;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.haxan .img-max-width {
+  /* Max width for first two images of last section */
+  max-width: 580px;
+}
+
+.haxan iframe {
+  /* Youtube embed */
+  width: 100%;
+  max-width: 600px;
+  margin: 1em 0 1em;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.haxan .main> :nth-child(2) iframe {
+  /* First video (section 2) */
+  margin-top: 0;
+}
+
+.haxan ul {
+  /* Stops list stacking horizontally */
+  flex-wrap: wrap;
+}
+
+.haxan ul li {
+    margin: 0.5rem auto;
+}
+
+.haxan .footer-wrapper {
+  margin-top: 2rem;
+}
+
+@media (min-width: 594px) {
+
+  /* Changes video size ratio */
+  .haxan iframe {
+    max-width: 800px;
+    height: 400px;
+  }
+}
+
+/* ---------
+  5. LISTEN
+  --------- */
+
+.listen {
+  background-image: url('../images/background_sigil.jpg');
+  background-size: contain;
+  background-color: black;
+  color: black;
+  margin: 0 auto 0;
+  /* Stops nav pushing div container down */
+  overflow: hidden;
+  font-size: calc(1.1rem + 0.5vw);
+  text-align: center;
+}
+
+.listen .main img {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.listen h1 {
+  margin: 0 auto 1em;
+  font-size: calc(3rem + 0.5vw);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgb(192, 191, 191);
+}
+
+.listen .row-wrapper {
+  position: relative;
+}
+
+.listen .row-wrapper::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+}
+
+.listen .row {
+  position: relative;
+  margin: 3rem auto;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.listen iframe {
+  /* Youtube embed */
+  width: 100%;
+  max-width: 600px;
+  margin: 1em 0 1em;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.listen p {
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.listen p span {
+  font-size: calc(1.2rem + 0.5vw);
+}
+
+.listen #youtube {
+  max-width: 100px;
+  margin: 1rem auto 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+@media (min-width: 400px) {
+
+  /* Changes video size ratio */
+  .listen iframe {
+    max-width: 800px;
+    height: 400px;
+  }
+}
+
+@media(min-width: 500px) {
+
+  /* Narrower wrapper on larger screens */
+  .listen .row-wrapper {
+    margin: 0 2.5% 0;
+  }
+}
+
+@media(min-width: 992px) {
+
+  /* Increases text size for larger screens, decreases gap between video rows, changes video size ratio */
+  .listen .row {
+    margin: 0 auto 0;
+  }
+
+  .listen .row:first-child {
+    margin-top: 3rem;
+  }
+
+  .listen .listen .row p {
+    font-size: calc(1.2rem + 0.5vw);
+  }
+
+  .listen .row p span {
+    font-size: calc(1.3rem + 0.5vw);
+  }
+
+  .listen iframe {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* Changes video size ratio */
+  .listen iframe {
+    height: 400px;
+  }
+}
+
+/* -------
+  6. Gigs
+  ------ */
+.gigs {
+  background-image: url('../images/background_paper.jpg');
+  background-size: cover;
+  background-color: black;
+  color: black;
+  margin: 0 auto 0;
+  /* Stops nav pushing div container down */
+  overflow: hidden;
+  font-size: calc(1.1rem + 0.5vw);
+  text-align: center;
+}
+
+.gigs .container {
+  padding: 1rem 1rem;
+}
+
+.gigs h1 {
+  font-family: 'PrinceValiant';
+  font-size: 3rem;
+}
